@@ -23,3 +23,10 @@ tyler = {
 }
 
 students = [lloyd, alice, tyler]
+
+for person in students:
+    print person["name"]
+    print person["homework"]
+    print person["quizzes"]
+    print person["tests"]
+
