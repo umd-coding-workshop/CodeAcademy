@@ -29,4 +29,7 @@ for person in students:
     print person["homework"]
     print person["quizzes"]
     print person["tests"]
+    
+def average(lst):
+    return float(sum(lst))/len(lst)
 
