@@ -33,3 +33,5 @@ for person in students:
 def average(lst):
     return float(sum(lst))/len(lst)
 
+# Jennie's comment - I am really far behind! Also, if this were real code,
+# I would want to keep these values in a CSV and import them into this script :)
