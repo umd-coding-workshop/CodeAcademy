@@ -32,6 +32,9 @@ for person in students:
     
 def average(lst):
     return float(sum(lst))/len(lst)
+    
+def get_average(student):
+    return average(student["homework"])*0.1 + average(student["quizzes"])*0.3 + average(student["tests"])*0.6
 
 # Jennie's comment - I am really far behind! Also, if this were real code,
 # I would want to keep these values in a CSV and import them into this script :)
