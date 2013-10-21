@@ -38,3 +38,18 @@ def get_average(student):
 
 # Jennie's comment - I am really far behind! Also, if this were real code,
 # I would want to keep these values in a CSV and import them into this script :)
+    
+def get_letter_grade(score):
+    if score >= 90: 
+        return "A"
+    if score >= 80 and score <90: 
+        return "B"
+    if score >=70 and score <80:
+        return "C"
+    if score >=60 and score <70:
+        return "D"
+    if score <60:
+        return "F"
+        
+grade = get_average(lloyd)
+print get_letter_grade(grade)
