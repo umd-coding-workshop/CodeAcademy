@@ -38,3 +38,12 @@ def get_average(student):
 
 # Jennie's comment - I am really far behind! Also, if this were real code,
 # I would want to keep these values in a CSV and import them into this script :)
+
+# Linda: This is lesson 8:
+class_list = [lloyd, alice, tyler]
+
+def get_class_average(class_list):
+    x = 0
+    for item in class_list:
+        x += (get_average(item))
+    return x / len(class_list)
