@@ -55,7 +55,6 @@ grade = get_average(lloyd)
 print get_letter_grade(grade)
 
 # Linda: This is lesson 8:
-class_list = [lloyd, alice, tyler]
 
 def get_class_average(class_list):
     x = 0
@@ -63,3 +62,4 @@ def get_class_average(class_list):
         x += (get_average(item))
     return x / len(class_list)
 
+get_class_average(students)
