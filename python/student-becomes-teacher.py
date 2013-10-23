@@ -34,9 +34,13 @@ def get_letter_grade(score):
         return "D"
     if score <60:
         return "F"
-        
-grade = get_average(lloyd)
-print get_letter_grade(grade)
+
+# Had to make some changes there since lloyd is no longer 
+# defined as its own array, but is just one item in students list
+# now that student data is stored in json dump
+for x in students:
+    grade = get_average(x)
+    print get_letter_grade(grade)
 
 # Linda: This is lesson 8:
 
