@@ -1,29 +1,13 @@
-
 # CodeAcademy course: Student Becomes the Teacher
 # http://www.codecademy.com/courses/python-beginner-en-qzsCL
 
-# initialize the student data
-lloyd = {
-    "name": "Lloyd",
-    "homework": [90.0, 97.0, 75.0, 92.0],
-    "quizzes": [88.0, 40.0, 94.0],
-    "tests": [75.0, 90.0]
-}
-alice = {
-    "name": "Alice",
-    "homework": [100.0, 92.0, 98.0, 100.0],
-    "quizzes": [82.0, 83.0, 91.0],
-    "tests": [89.0, 97.0]
-}
-tyler = {
-    "name": "Tyler",
-    "homework": [0.0, 87.0, 75.0, 22.0],
-    "quizzes": [0.0, 75.0, 78.0],
-    "tests": [100.0, 100.0]
-}
+import json
 
-students = [lloyd, alice, tyler]
-
+# open the data file in read mode
+f = open("data.json", "r")
+# load the data (stored as a json object) into the students list
+students = json.load(f)
+    
 for person in students:
     print person["name"]
     print person["homework"]
@@ -50,9 +34,13 @@ def get_letter_grade(score):
         return "D"
     if score <60:
         return "F"
-        
-grade = get_average(lloyd)
-print get_letter_grade(grade)
+
+# Had to make some changes there since lloyd is no longer 
+# defined as its own array, but is just one item in students list
+# now that student data is stored in json dump
+for x in students:
+    grade = get_average(x)
+    print get_letter_grade(grade)
 
 # Linda: This is lesson 8:
 
