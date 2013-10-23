@@ -1,29 +1,20 @@
-
 # CodeAcademy course: Student Becomes the Teacher
 # http://www.codecademy.com/courses/python-beginner-en-qzsCL
 
-# initialize the student data
-lloyd = {
-    "name": "Lloyd",
-    "homework": [90.0, 97.0, 75.0, 92.0],
-    "quizzes": [88.0, 40.0, 94.0],
-    "tests": [75.0, 90.0]
-}
-alice = {
-    "name": "Alice",
-    "homework": [100.0, 92.0, 98.0, 100.0],
-    "quizzes": [82.0, 83.0, 91.0],
-    "tests": [89.0, 97.0]
-}
-tyler = {
-    "name": "Tyler",
-    "homework": [0.0, 87.0, 75.0, 22.0],
-    "quizzes": [0.0, 75.0, 78.0],
-    "tests": [100.0, 100.0]
-}
+import json
 
-students = [lloyd, alice, tyler]
+# open the data file in read mode
+f = open("data.json", "r")
+# load the data (stored as a json object) into the students list
+students = json.load(f)
 
+# to verify that everything loaded right, print the students list
+for x in students:
+    print("\nStudent: " + x['name'])
+    print("Homework: " + str(x['homework']))
+    print("Quizzes: " + str(x['quizzes']))
+    print("Tests: " + str(x['tests']))
+    
 for person in students:
     print person["name"]
     print person["homework"]
