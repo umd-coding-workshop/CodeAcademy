@@ -7,13 +7,6 @@ import json
 f = open("data.json", "r")
 # load the data (stored as a json object) into the students list
 students = json.load(f)
-
-# to verify that everything loaded right, print the students list
-for x in students:
-    print("\nStudent: " + x['name'])
-    print("Homework: " + str(x['homework']))
-    print("Quizzes: " + str(x['quizzes']))
-    print("Tests: " + str(x['tests']))
     
 for person in students:
     print person["name"]
